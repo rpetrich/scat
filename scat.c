@@ -11,6 +11,9 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <errno.h>
+#include <stdio.h>
+#include <unistd.h>
+#include <stdlib.h>
 
 #define MAX_SEEK 0x0fffffff
 
