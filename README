@@ -1,0 +1,10 @@
+Super Cat!
+A cat that jumps tall buildings!
+Created by Ryan Petrich because I needed a cat that starts in the middle of a file and that reports its status
+
+Usage:
+  scat file offset
+  file = path to a file or device on disk
+  offset = offset into file as an integer (> 32 bits allowed)
+Example:
+  scat /dev/rdisk0s2s1 13478297600
