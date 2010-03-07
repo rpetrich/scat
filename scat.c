@@ -44,7 +44,7 @@ int main(int argc, char *argv[]) {
 	
 	char *buffer = malloc(block_size);
 	ssize_t bytes_read;
-	long int total = 0;
+	long long total = 0;
 	while(bytes_read = read(fd, buffer, block_size)) {
 		if (bytes_read == -1) {
 			fprintf(stderr, "Error reading: %i\n", errno);
@@ -62,7 +62,7 @@ int main(int argc, char *argv[]) {
 			pos_in_buffer += bytes_written;
 		} while (pos_in_buffer != bytes_read);
 		total += bytes_read;
-		fprintf(stderr, "Written: %li\r", total);
+		fprintf(stderr, "Written: %lld\r", total);
 	}
 	fprintf(stderr, "\n");
 	close(fd);
